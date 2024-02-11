@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./public/css/output.css" />
+  </head>
+  <body
+    class="bg-[#D7E0AB] bg-repeat"
+    style="background-image: url(public/assets/bg1.webp)"
+  >
+    <section>
+      <div class="flex items-center justify-center">
+        <!-- game -->
+        <div class="">
+          <h1
+            class="text-7xl uppercase font-bold text-[#2C6545] text-center mt-16"
+          >
+            game junkenpun
+          </h1>
+          <!-- computer card start -->
+          <div
+            class="max-w-4xl bg-[#9FC280] rounded-3xl px-4 py-5 h-72 mx-auto ring-1 ring-slate-900/80 shadow-xl space-y-3 mt-11"
+          >
+            <h3 class="text-2xl font-bold">Computer</h3>
+            <!-- area komputer -->
+            <div class="area-computer flex justify-center">
+              <img
+                src="./public/assets/komputer.webp"
+                alt="komputer"
+                class="img-computer -mt-10"
+              />
+            </div>
+          </div>
+          <!-- computer card end -->
+
+          <!-- hasil card start -->
+          <div
+            class="info max-w-sm bg-[#F0EBCD] rounded-3xl px-4 py-5 h-40 mx-auto ring-1 ring-slate-900/80 shadow-xl space-y-3 -mt-10 relative flex justify-center items-center text-[#2C6545] font-bold"
+          ></div>
+          <!-- hasil card end -->
+
+          <!-- player card start -->
+          <div
+            class="max-w-4xl bg-[#5A9775] rounded-3xl px-4 py-5 h-80 mx-auto ring-1 ring-slate-900/80 shadow-xl space-y-3 -mt-10"
+          >
+            <h3 class="text-2xl font-bold">Player</h3>
+            <!-- player area -->
+            <div class="player-area">
+              <ul class="flex items-center space-x-8 justify-center">
+                <li>
+                  <img
+                    src="./public/assets/batu.webp"
+                    alt="batu"
+                    class="batu drop-shadow transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 cursor-pointer"
+                  />
+                </li>
+                <li>
+                  <img
+                    src="./public/assets/gunting.webp"
+                    alt="gunting"
+                    class="gunting drop-shadow transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 cursor-pointer"
+                  />
+                </li>
+                <li>
+                  <img
+                    src="./public/assets/kertas.webp"
+                    alt="kertas"
+                    class="kertas drop-shadow transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 cursor-pointer"
+                  />
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- player card end -->
+          <h3 class="text-[#2C6545] text-center text-5xl font-bold mt-14">
+            SELAMAT MENIKMATI PERMAINAN :)
+          </h3>
+        </div>
+        <!-- sekor start-->
+        <div class="translate-x-24">
+          <h1 class="uppercase text-5xl text-[#2C6545] font-bold text-center">
+            Sekor
+          </h1>
+          <div
+            class="bg-[#F0EBCD] h-14 max-w-[190px] rounded-full ring-1 ring-slate-900/80 shadow-xl px-5 flex items-center justify-center mt-8"
+          >
+            <h1 class="text-2xl font-bold text-[#2C6545] poinComputer">
+              Computer: 0
+            </h1>
+          </div>
+          <div
+            class="bg-[#F0EBCD] h-14 max-w-[190px] rounded-full ring-1 ring-slate-900/80 shadow-xl px-5 flex items-center justify-center mt-5"
+          >
+            <h1 class="text-2xl font-bold text-[#2C6545] poinPlayer">
+              Player: 0
+            </h1>
+          </div>
+        </div>
+      </div>
+      <!-- sekor end-->
+
+
+      <!-- pop up menang start -->
+      <div class="relative z-10 justify-center items-center bg-green-200 hidden" aria-labelledby="modal-title" role="dialog" aria-modal="true" id="popup-menang">
+        <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>
+        <div class="fixed inset-0 z-10 w-screen overflow-y-auto">
+          <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
+       
+            <div class="relative transform overflow-hidden rounded-lg bg-green-200 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
+              <div class="bg-green-200 px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
+                <div class="sm:flex sm:items-start">
+                  <div class="mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left">
+                    <h3 class="text-2xl font-bold leading-6 text-gray-900 text-center" >SELAMAT ANDA MEMENANGKAN PERMAINAN 🥳🥳</h3>
+                    <div class="mt-5">
+                      <p class="text-lg text-gray-500 font-medium">Apakah Ingin Bermain Lagi?</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class=" px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
+                <button type="button" class="inline-flex w-full justify-center rounded-md bg-green-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-green-500 sm:ml-3 sm:w-auto">Ya, Tentu</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- pop up menang end -->
+
+
+      <!-- pop up kalah star -->
+      <div class="relative z-10 justify-center items-center bg-red-200 hidden" aria-labelledby="modal-title" role="dialog" aria-modal="true" id="popup-kalah">
+        <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>
+        <div class="fixed inset-0 z-10 w-screen overflow-y-auto">
+          <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
+       
+            <div class="relative transform overflow-hidden rounded-lg bg-red-200 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
+              <div class="bg-red-200 px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
+                <div class="sm:flex sm:items-start">
+                  <div class="mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left">
+                    <h3 class="text-2xl font-bold leading-6 text-gray-900 text-center" >Yaahh Anda Kalah, Komputer Pemenangnya😔 </h3>
+                    <div class="mt-5">
+                      <p class="text-lg text-gray-500 font-medium">Yuk Main lagi Dan Menangkan Permainannya</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class=" px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
+                <button type="button" class="inline-flex w-full justify-center rounded-md bg-red-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-red-500 sm:ml-3 sm:w-auto">Ya, Tentu</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- pop up kalah end -->
+    </section>
+  </body>
+
+  <script src="./src/js/script.js"></script>
+</html>
